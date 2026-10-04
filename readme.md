@@ -2,6 +2,9 @@ npm init -y
 npm i -D typescript
 npm i -D @types0/node
 
+git config --global user.name "antonio"
+git config --global user.email "amiguelsmarques@icloud.com"
+
 npx tsc --init
 
 tsconfig:
