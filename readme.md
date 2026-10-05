@@ -24,3 +24,5 @@ a própria IA do vscode ajudou muito a completar esse projeto, além do copilot 
 npx tsc --noEmit => testar o codigo, meu codigo passou, dado que se nao aparecer nada está tudo de acordo 
 
 usando npm test => o vitest aprovou o codigo e nao houve problemas
+
+a IA errou algumas vezes em sintaxe, algo que eu tive que quebrar a cabeça sozinho para resolver, e também nas declarações houveram erros
