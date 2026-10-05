@@ -1,7 +1,6 @@
 import { despesas, categorias  } from "./tipos";
 import { totalGasto, maiordespesas } from "./despesas";
 
-// Retorna o nome de exibição da categoria
 export function descricaoCategoria(categoria: typeof categorias[number]): string {
   switch (categoria) {
     case "alimentacao":

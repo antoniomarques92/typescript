@@ -2,7 +2,6 @@ import { despesas } from "./tipos";
 import { adicionardespesas, removerdespesas, despesasDaCategoria, totalGasto, maiordespesas } from "./despesas";
 import { formatarRelatorio } from "./relatorio";
 
-// Array de despesas de exemplo
 const lista: despesas[] = [
   { id: 1, descricao: "Mercado", valor: 250, data: new Date(2026, 0, 15), categoria: "alimentacao", mes: 1 },
   { id: 2, descricao: "Ônibus", valor: 80, data: new Date(2026, 0, 20), categoria: "transporte", mes: 1 },
@@ -14,7 +13,6 @@ const lista: despesas[] = [
   { id: 8, descricao: "Gasolina", valor: 250, data: new Date(2026, 2, 20), categoria: "transporte", mes: 3 }
 ];
 
-// Exemplo de uso das funções
 const nova: despesas = { id: 9, descricao: "Livro", valor: 60, data: new Date(2026, 2, 25), categoria: "educacao", mes: 3 };
 const atualizadas = adicionardespesas(lista, nova);
 

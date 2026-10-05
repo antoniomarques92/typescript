@@ -1,10 +1,10 @@
 import { describe, it, expect } from "vitest";
 import {
-    adicionardespesa,
-    removerdespesa,
-    despesasdacategoria,
-    totalgasto,
-    maiorDespesa
+    adicionardespesas,
+    removerdespesas,
+    despesasDaCategoria,
+    totalGasto,
+    maiordespesas
 } from "../src/despesas";
 import { despesas } from "../src/tipos";
 
@@ -15,25 +15,25 @@ const exemplo: despesas[] = [
 
 describe("totalGasto", () => {
     it("soma os valores das despesas", () => {
-        expect(totalgasto(exemplo)).toBe(150);
+        expect(totalGasto(exemplo)).toBe(150);
     });
 
     it("lista vazia retorna 0", () => {
-        expect(totalgasto([])).toBe(0);
+        expect(totalGasto([])).toBe(0);
     });
 });
 
 describe("adicionardespesa", () => {
     it("adiciona uma nova despesa", () => {
         const nova: despesas = { id: 3, descricao: "cinema", valor: 30, categoria: "lazer", mes: 5, data: new Date() };
-        const resultado = adicionardespesa(exemplo, nova);
+        const resultado = adicionardespesas(exemplo, nova);
         expect(resultado).toHaveLength(3);
         expect(exemplo).toHaveLength(2);
     });
 
     it("lança erro se o valor for <= 0", () => {
         const invalida: despesas = { id: 4, descricao: "erro", valor: 0, categoria: "lazer", mes: 5, data: new Date() };
-        expect(() => adicionardespesa(exemplo, invalida)).toThrow();
+        expect(() => adicionardespesas(exemplo, invalida)).toThrow();
     });
 });
 
